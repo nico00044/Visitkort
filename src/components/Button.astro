@@ -3,19 +3,18 @@
 const { variant= "primary", size = "medium" } = Astro.props; 
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const buttonStyling = "border-2 px-16 py-4"; 
+const buttonStyling = "hover:scale-110 duration-300 ease-in-out"; 
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
-"primary": "border-black", /* border-primary-500 */
-"secondary": "border-blue-500" /* border-secondary-500 */
+"primary": "rounded-2xl bg-primary-600 text-primary-900 hover:bg-secondary-100 hover:text-white active:bg-secondary-200", /* border-primary-500 */
 };
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
-"large": "text-4xl",
-"medium": "text-xl",
-"small": "text-large"
+"large": "p-10 text-lg",
+"medium": "p-8 text-base",
+"small": "p-4 text-sm font-serif"
 };
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
